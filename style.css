@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 40px 0;
+}
+
+.card {
+  padding: 30px 30px 10px 30px;
+  color: hsl(210, 46%, 95%);
+  margin: 20px;
+  border-radius: 10px;
+}
+.purple {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 40px;
+}
+.gray {
+  background-color: hsl(217, 19%, 35%);
+}
+.black {
+  background-color: hsl(219, 29%, 14%);
+}
+.white {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 11%);
+}
+
+.img-and-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.profile-image {
+  object-fit: contain;
+  height: 50px;
+  margin: 0 30px 0 0;
+  border-radius: 50%;
+}
+.purple-border {
+  border: 2px solid hsl(263, 55%, 72%);
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.verified {
+  font-size: 15px;
+  color: hsl(210, 2%, 80%);
+}
+
+.white > .img-and-profile > .profile > .name {
+  color: hsl(219, 29%, 14%);
+}
+
+.white > .img-and-profile > .profile > .verified {
+  color: hsl(0, 0%, 50%);
+}
+.top-para {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 0 5px 0;
+  line-height: 1.3;
+}
+.bottom-para {
+  padding: 5px 0 20px 0;
+  color: hsl(0, 0%, 70%);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 10vh;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "purp purp gris whit2"
+      "whit1 blac blac whit2";
+    max-width: 1300px;
+    margin: auto;
+  }
+  .card {
+    margin: 10px;
+  }
+  .purple {
+    grid-area: purp;
+  }
+  .gray {
+    grid-area: gris;
+  }
+  .grid-white1 {
+    grid-area: whit1;
+  }
+  .grid-white2 {
+    grid-area: whit2;
+  }
+  .black {
+    grid-area: blac;
+  }
+  .bottom-para {
+    font-size: 14px;
+  }
+}
